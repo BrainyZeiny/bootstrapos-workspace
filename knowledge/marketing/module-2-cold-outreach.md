@@ -41,8 +41,11 @@ Lessons cover:
 4. Rep calls with context: "I saw you were checking us out..."
 5. The call converts at dramatically higher rates than cold calls alone
 
-## Skills Reference
+## Execute with These Skills and Agents
 
-See /skills/marketing/cold-outbound-infrastructure.md for the full setup playbook.
-See /skills/marketing/cold-call-pairing-system.md for the call pairing system.
-See /agents/cold-outbound-agent.md for the ongoing autonomous agent.
+- `/skills/marketing/cold-outbound-infrastructure.md` — set up the full infrastructure (domains, inboxes, warmup)
+- `/skills/marketing/cold-call-pairing-system.md` — pair email with cold calls for higher conversion
+- `/skills/marketing/mass-email-at-scale.md` — scale to thousands of emails per day
+- `/agents/cold-outbound-agent.md` — autonomous agent that runs the outbound system daily
+
+When you are ready to execute, the skills and agents in this repo handle the tactical steps.

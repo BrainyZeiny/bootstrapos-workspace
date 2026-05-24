@@ -77,3 +77,31 @@ Claude Code: x.x.x
 
 Your Windows machine is ready to build.
 ```
+
+---
+
+## Error Handling
+
+If any step fails, Claude should:
+1. Read the error message carefully
+2. Check if the issue is a Windows feature that needs enabling
+3. Check if the tool is already installed (skip and verify the version)
+4. Try an alternative installation method
+5. Only ask the user for help if three attempts have failed
+
+### Common Issues and Fixes
+
+**WSL fails to install**
+- Windows Subsystem for Linux may need to be enabled manually. Run in PowerShell as admin: `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart` and then `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`. Restart the computer and try again.
+
+**Ubuntu does not install automatically**
+- If `wsl --install` does not install Ubuntu, run `wsl --install -d Ubuntu` explicitly.
+
+**npm permission errors in WSL**
+- If `npm install -g` fails with EACCES inside WSL, fix with `sudo chown -R $USER /usr/local/lib/node_modules`.
+
+**PATH not updated after install**
+- If a tool was just installed but the command is not found, run `source ~/.bashrc` or open a new terminal tab.
+
+**Windows Defender blocks scripts**
+- If PowerShell scripts are blocked, the user may need to run `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell as admin.

@@ -1,5 +1,7 @@
 # Setup — First-Time Machine Configuration
 
+**Prerequisite:** You should have already cloned this repo from https://github.com/BrainyZeiny/bootstrapos-workspace. If you have not, run `git clone https://github.com/BrainyZeiny/bootstrapos-workspace.git` first, then open the folder in Claude Code.
+
 Say this to Claude to run this script:
 
 > Follow setup.md

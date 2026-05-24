@@ -34,3 +34,12 @@ If you are early and need revenue now:
 Find the best creator in your space who has built from zero. Study their format, their cadence, their angle. Do not copy them. Understand what is working and why, then apply that understanding to your own original perspective.
 
 Post consistently for at least six months before evaluating whether it is working. Most people quit in month two.
+
+## Execute with These Skills and Agents
+
+- `/skills/marketing/programmatic-seo-pages.md` — generate SEO pages at scale
+- `/skills/marketing/reddit-organic-launch.md` — organic Reddit strategy without ad spend
+- `/agents/content-agent.md` — autonomous agent that creates and distributes content
+- `/agents/reddit-organic-agent.md` — autonomous agent that runs organic Reddit engagement
+
+When you are ready to execute, the skills and agents in this repo handle the tactical steps.

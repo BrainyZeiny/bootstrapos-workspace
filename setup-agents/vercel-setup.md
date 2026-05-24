@@ -57,3 +57,35 @@ Environment variables: all configured
 
 Test deployment: successful
 ```
+
+---
+
+## Validation
+
+After completing the setup, run these checks to confirm everything works:
+
+1. **Verify the deployment is live:** Run `curl -s -o /dev/null -w "%{http_code}" [vercel-url]` — this should return `200`.
+2. **Verify auto-deploy is connected:** Push a small change to the master branch and confirm a new deployment starts in the Vercel dashboard within 60 seconds.
+
+## Error Handling
+
+If any step fails, Claude should:
+1. Read the error message carefully
+2. Check if the Vercel CLI is authenticated (`vercel whoami`)
+3. If the project is already linked, skip linking and verify the existing connection
+4. Check the build logs in the Vercel dashboard for specific errors
+5. Only ask the user for help if three attempts have failed
+
+### Common Issues and Fixes
+
+**Vercel CLI not found**
+- Install with `npm install -g vercel` and then run `vercel login`.
+
+**Build fails on first deploy**
+- Check the build logs in the Vercel dashboard. The most common issue is missing environment variables. Add them in the Vercel project settings under "Environment Variables."
+
+**Auto-deploy not triggering**
+- Verify the GitHub integration is connected in Vercel project settings → Git. The production branch should be set to `master`.
+
+**Environment variables not available in the app**
+- In Vercel, environment variables must be prefixed with `NEXT_PUBLIC_` to be available in the browser. Server-side variables do not need the prefix.

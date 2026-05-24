@@ -50,3 +50,30 @@ Cold outreach to supply side first. Then paid ads for demand.
 ## The Rule
 
 Pick your path. Go deep. That is the whole game. Everything else is noise.
+
+## Skills and Agents in This Repo
+
+**Cold Outreach path:**
+- `/skills/marketing/cold-outbound-infrastructure.md` — full infrastructure setup (domains, inboxes, warmup)
+- `/skills/marketing/cold-call-pairing-system.md` — pair email with cold calls for higher conversion
+- `/skills/marketing/mass-email-at-scale.md` — scale to thousands of emails per day
+
+**Paid Ads path:**
+- `/skills/marketing/reddit-ad-launch.md` — launch Reddit ads
+- `/skills/marketing/meta-ad-launch.md` — launch Meta/Facebook ads
+- `/skills/marketing/google-search-ad-launch.md` — launch Google search ads for high-intent capture
+
+**Affiliate path:**
+- `/skills/marketing/affiliate-program-setup.md` — set up the affiliate program from scratch
+- `/skills/marketing/affiliate-propaganda-pack.md` — create the content kit affiliates need to sell for you
+
+**Content path:**
+- `/skills/marketing/programmatic-seo-pages.md` — generate SEO pages at scale
+
+**Agents:**
+- `/agents/cold-outbound-agent.md` — autonomous agent that runs the outbound system daily
+- `/agents/paid-media-agent.md` — autonomous agent that monitors and optimizes ad spend daily
+- `/agents/outbound-agent.md` — autonomous agent that recruits and manages affiliate partners
+- `/agents/content-agent.md` — autonomous agent that creates and distributes content
+
+When you are ready to execute, the skills and agents in this repo handle the tactical steps. You do not need to figure out how — just tell Claude which skill to follow.

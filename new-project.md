@@ -56,7 +56,7 @@ Step 7 — Connect Turso to Hasura.
 Follow /setup-agents/hasura-setup.md. Connect the Turso database. Add the Hasura endpoint and admin secret to .env.local.
 
 Step 8 — Design the schema in Hasura.
-Based on the master plan, create every table in Hasura with the correct fields and relationships. Verify each table appears in the GraphQL explorer before moving on.
+Check the schema templates in /reference/schema-templates/ for a starting point. If this app is a blog, marketplace, social feed, dashboard, or SaaS with billing, there is a ready-made schema to start from. Based on the master plan and any relevant template, create every table in Hasura with the correct fields and relationships. Verify each table appears in the GraphQL explorer before moving on.
 
 Step 9 — Begin building feature one.
 Use /skills/engineering/test-driven.md and /skills/engineering/long-task.md to define done and start the closed-loop build. Do not stop until feature one is complete and all tests pass.

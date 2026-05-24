@@ -40,8 +40,10 @@ Ideal affiliate for Hivemind:
 - Posts regularly and has real engagement
 - Has already placed candidates at companies like your buyers
 
-## Skills Reference
+## Execute with These Skills and Agents
 
-See /skills/marketing/affiliate-program-setup.md
-See /skills/marketing/affiliate-propaganda-pack.md
-See /agents/outbound-agent.md for affiliate recruitment automation
+- `/skills/marketing/affiliate-program-setup.md` — set up the affiliate program from scratch
+- `/skills/marketing/affiliate-propaganda-pack.md` — create the content kit affiliates need to sell for you
+- `/agents/outbound-agent.md` — autonomous agent that recruits and manages affiliate partners
+
+When you are ready to execute, the skills and agents in this repo handle the tactical steps.

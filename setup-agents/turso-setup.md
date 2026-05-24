@@ -62,3 +62,36 @@ Auth token: saved to .env.local and Vercel
 Cost: $0/month (free tier)
 Row read limit: 9 billion/month
 ```
+
+---
+
+## Validation
+
+After completing the setup, run these checks to confirm everything works:
+
+1. **Verify the database exists:** `turso db show [project-name]-db --url` — this should print the database URL.
+2. **Verify the auth token is valid:** Check that the token stored in `.env.local` is non-empty and starts with a valid prefix.
+3. **Run a test query:** Connect to the database and run `SELECT 1;` to confirm read access works.
+
+## Error Handling
+
+If any step fails, Claude should:
+1. Read the error message carefully
+2. Check if Turso CLI is authenticated (`turso auth status`)
+3. If the database already exists, skip creation and retrieve the existing URL
+4. If token generation fails, try `turso db tokens create [project-name]-db` again
+5. Only ask the user for help if three attempts have failed
+
+### Common Issues and Fixes
+
+**Turso CLI not found after install**
+- Run `source ~/.bashrc` or `source ~/.zshrc` to reload the PATH.
+
+**Database creation fails with "already exists"**
+- This is not an error. Run `turso db show [project-name]-db --url` to get the URL of the existing database.
+
+**Auth token is empty or invalid**
+- Run `turso auth login` to re-authenticate, then generate a new token.
+
+**Connection refused when testing**
+- Verify the database URL starts with `libsql://`. If it starts with `https://`, replace it with `libsql://`.

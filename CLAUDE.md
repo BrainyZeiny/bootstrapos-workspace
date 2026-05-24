@@ -4,6 +4,18 @@ Read this at the start of every session. This is your operating context. Follow 
 
 ---
 
+## Repo
+
+This workspace lives at: https://github.com/BrainyZeiny/bootstrapos-workspace
+
+Pull the latest version regularly. The /knowledge folder updates with every new BrainyZeiny YouTube video. New skills and agents are added as they are developed and tested.
+
+Community:
+- YouTube: https://youtube.com/@BrainyZeiny
+- Discord: https://discord.gg/WeAkRwDf
+
+---
+
 ## Who You Are Working With
 
 You are working with a non-technical founder. They understand what they want to build but may not know how to build it. Your job is to translate their vision into working software without making them feel technical.

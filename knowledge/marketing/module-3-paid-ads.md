@@ -38,9 +38,12 @@ Lessons cover:
 
 Test everything. Run 3-5 creative variations at once. Kill losers in 7 days. Scale winners without mercy. Never fall in love with your creative. The data decides.
 
-## Skills Reference
+## Execute with These Skills and Agents
 
-See /skills/marketing/reddit-ad-launch.md
-See /skills/marketing/meta-ad-launch.md
-See /skills/marketing/google-search-ad-launch.md
-See /agents/paid-media-agent.md
+- `/skills/marketing/reddit-ad-launch.md` — launch Reddit ads ($90K/month at 18x ROAS)
+- `/skills/marketing/meta-ad-launch.md` — launch Meta/Facebook ads ($35K/month at 16x lifetime ROAS)
+- `/skills/marketing/google-search-ad-launch.md` — launch Google search ads for high-intent capture
+- `/agents/paid-media-agent.md` — autonomous agent that monitors and optimizes ad spend daily
+- `/skills/marketing/landing-page-builder.md` — build conversion-optimized landing pages for your ads
+
+When you are ready to execute, the skills and agents in this repo handle the tactical steps.

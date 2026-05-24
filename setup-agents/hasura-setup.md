@@ -63,3 +63,44 @@ Test query: passing
 Next step: Create your tables in Hasura → Data → [database] → Create Table
 Every table you create gets an instant GraphQL API.
 ```
+
+---
+
+## Validation
+
+After completing the setup, run these checks to confirm everything works:
+
+1. **Verify the GraphQL endpoint responds:** Run a test query against the Hasura endpoint:
+   ```
+   curl -X POST [hasura-endpoint]/v1/graphql \
+     -H "Content-Type: application/json" \
+     -H "x-hasura-admin-secret: [admin-secret]" \
+     -d '{"query": "{ __typename }"}'
+   ```
+   This should return `{"data":{"__typename":"query_root"}}`.
+
+2. **Verify Turso is connected:** In the Hasura console, check that the database appears under "Data" and tables can be browsed.
+
+## Error Handling
+
+If any step fails, Claude should:
+1. Read the error message carefully
+2. Verify the Hasura endpoint URL is correct and accessible
+3. Verify the admin secret matches what is in the Hasura Cloud dashboard
+4. If the Turso connection fails, verify the database URL format
+5. Only ask the user for help if three attempts have failed
+
+### Common Issues and Fixes
+
+**Turso connection fails in Hasura**
+- The database URL must start with `libsql://`, not `https://`. Check the URL format in the Hasura connection settings.
+- The auth token must be the full token string with no trailing whitespace.
+
+**Admin secret does not work**
+- Go to Hasura Cloud dashboard → project settings → env vars. Verify `HASURA_GRAPHQL_ADMIN_SECRET` is set. Copy it exactly (no extra spaces).
+
+**GraphQL endpoint returns 404**
+- Verify the endpoint URL ends with `/v1/graphql`. The full URL should look like `https://[project-name].hasura.app/v1/graphql`.
+
+**Tables do not appear after creating them**
+- Click "Track" next to untracked tables in the Hasura console. Hasura does not auto-track new tables.

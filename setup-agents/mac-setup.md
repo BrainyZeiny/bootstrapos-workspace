@@ -68,3 +68,31 @@ Claude Code: x.x.x
 
 Your Mac is ready to build.
 ```
+
+---
+
+## Error Handling
+
+If any step fails, Claude should:
+1. Read the error message carefully
+2. Check if it is a permissions issue (run with sudo if needed)
+3. Check if the tool is already installed (skip and verify the version)
+4. Try an alternative installation method
+5. Only ask the user for help if three attempts have failed
+
+### Common Issues and Fixes
+
+**Homebrew fails to install**
+- Xcode command line tools may be missing. Run `xcode-select --install` first and wait for it to complete before retrying Homebrew.
+
+**Node.js version is too old**
+- If the default `brew install node` gives a version older than 20, run `brew install node@20` and then `brew link --overwrite node@20`.
+
+**SSH key already exists**
+- Before generating a new SSH key, check if `~/.ssh/id_ed25519` already exists. If it does, skip generation and use the existing key.
+
+**Permission denied errors**
+- If `npm install -g` fails with EACCES, fix permissions with `sudo chown -R $(whoami) /usr/local/lib/node_modules` rather than using sudo for every npm command.
+
+**Command not found after install**
+- If a tool was just installed but the command is not found, run `source ~/.zshrc` or open a new terminal session to reload the PATH.
