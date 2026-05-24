@@ -108,7 +108,7 @@ bootstrapos-workspace/
 ### Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/TheLastSultan/bootstrapos-workspace.git
+git clone https://github.com/BrainyZeiny/bootstrapos-workspace.git
 cd bootstrapos-workspace
 ```
 
