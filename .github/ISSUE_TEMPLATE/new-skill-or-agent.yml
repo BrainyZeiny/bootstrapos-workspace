@@ -1,0 +1,78 @@
+name: New Skill or Agent Proposal
+description: Propose a new skill or agent for the workspace
+title: "[Proposal]: "
+labels: ["new-content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to add a new skill or agent to BootstrapOS? Tell us about it. If it's good, we'll help you get it merged.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: What would you call this skill or agent?
+      placeholder: "stripe-billing-setup"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Is this a skill or an agent?
+      description: "Skills are reusable playbooks referenced throughout a project's life. Agents are autonomous missions that run on a schedule or trigger."
+      options:
+        - Skill
+        - Agent
+        - Setup agent
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Engineering
+        - Marketing
+        - Both
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it do?
+      description: Describe what this skill or agent would accomplish.
+      placeholder: "Walks through setting up Stripe billing for a SaaS app, including webhook configuration, subscription management, and connecting to Hasura."
+    validations:
+      required: true
+
+  - type: textarea
+    id: when
+    attributes:
+      label: When would someone use it?
+      description: What situation triggers the need for this?
+      placeholder: "When a founder is adding paid subscriptions to their app and needs Stripe connected to their stack."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tested
+    attributes:
+      label: Have you tested this yourself?
+      options:
+        - "Yes, I've used it in a real project"
+        - "Partially, I've tested parts of it"
+        - "No, this is a concept"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Draft content, links, examples, or related skills/agents this connects to.

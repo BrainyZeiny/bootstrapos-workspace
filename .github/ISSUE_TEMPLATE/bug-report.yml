@@ -1,0 +1,79 @@
+name: Bug Report
+description: Something is broken or not working as expected
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. The more detail you provide, the faster we can fix it.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly. What did you see?
+      placeholder: "When I tried to run setup.md, Claude got stuck on the Turso step and..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: What should have happened instead?
+      placeholder: "Claude should have created the Turso database and saved the credentials to .env.local"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How can we trigger this bug?
+      placeholder: |
+        1. Open Claude Code in the bootstrapos-workspace
+        2. Say "follow setup.md"
+        3. Wait for the Turso setup step
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area is affected?
+      options:
+        - Setup (setup.md / setup-agents)
+        - Knowledge (course modules)
+        - Skills (engineering or marketing)
+        - Agents
+        - Reference (templates)
+        - Example project
+        - CLAUDE.md / workspace rules
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Specific file (if known)
+      description: Which file is the bug in?
+      placeholder: "setup-agents/turso-setup.md"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Mac
+        - Windows (WSL)
+        - Linux
+        - Not applicable
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Paste any error messages, console output, or screenshots here.

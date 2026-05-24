@@ -1,0 +1,50 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea for BootstrapOS? We want to hear it. Tell us what you need and why.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want?
+      description: Describe the feature or improvement clearly.
+      placeholder: "A skill for setting up Stripe billing in a new project"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why do you need it?
+      description: What is your use case? What problem does this solve?
+      placeholder: "I'm building a SaaS and need to add subscription billing. The current setup doesn't cover payment integration."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which area does this belong in?
+      options:
+        - Skill (engineering)
+        - Skill (marketing)
+        - Agent
+        - Setup agent
+        - Schema template
+        - Component template
+        - Knowledge module
+        - Workspace structure
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Any additional context?
+      description: Screenshots, links, examples, or anything else that helps us understand.
